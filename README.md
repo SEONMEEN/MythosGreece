@@ -12,7 +12,7 @@ Built with HTML, Tailwind CSS, and jQuery.
 - Parallax-like image effects
 - Mobile responsive layout
 - Easy to customize
-- 
+
 ## 🛠️ Tools
 
 - HTML5
