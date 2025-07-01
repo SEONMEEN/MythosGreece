@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/function.js"></script>
+</head>
+
+<body>
+    <nav
+        class="fixed top-0 left-0 w-full bg-white/20 backdrop-blur-md text-black p-4 flex items-center justify-between z-[30]">
+        <div class="text-xl  font-bold">MythosGreece</div>
+
+        <!-- Hamburger Button -->
+        <button id="menu-btn" class="md:hidden p-2 rounded" aria-label="Toggle menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+        </button>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-6 text-lg" id="menu">
+            <li><a href="#home" class="hover:text-gray-300">Home</a></li>
+            <li><a href="#about" class="hover:text-gray-300">About</a></li>
+            <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed top-0 right-0 z-[99] h-full w-[200px] bg-white/40 text-black p-4 space-y-4 hidden overflow-auto">
+
+        <!-- ปุ่มกากบาท ปิดเมนู -->
+        <button id="close-btn" class="text-black text-sm font-bold mb-4 " aria-label="Close menu">✕</button>
+
+        <a href="#home" class="block hover:bg-pink-300">Home</a>
+        <a href="#about" class="block hover:text-gray-300">About</a>
+        <a href="#" class="block hover:text-gray-300">Contact</a>
+    </div>
+
+
+
+    <header id="home" class="relative h-[300px] bg-gray-200 w-full  overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-[800px] h-[300px] z-[5] 
+        bg-[url('./image/mountain2.png')] bg-cover bg-no-repeat bg-center
+        md:w-[1300px] xl:w-[1900px] "></div>
+        <div class="sun-helios absolute bg-[url('./image/helios2.png')] w-[120px] h-[120px] 
+        z-[4] bg-cover bg-no-repeat bg-center top-1/6 left-1/2 -translate-x-1/2 
+        md:w-[150px] md:h-[150px] "></div>
+    </header>
+    <div class="relative overflow-hidden w-full h-[50px] bg-white z-[5]">
+        <div class="line absolute top-0 left-0  bg-[url('./image/line.png')] bg-repeat-x h-[50px] w-[5000px]">
+        </div>
+    </div>
+    <section
+        class="relative intro-section h-[400px] flex items-center justify-center bg-gradient-to-b from-white via-gray-200 to-white text-black overflow-hidden">
+        <div class="moon absolute bg-[url('./image/moon.png')]  w-[120px] h-[120px] 
+        z-[4] bg-cover bg-no-repeat bg-center -top-1/2 left-1/2 -translate-x-1/2 
+        md:w-[150px] md:h-[150px]"></div>
+        <div id="intro-sentence"
+            class="flex flex-wrap justify-center gap-3 text-2xl md:text-4xl font-semibold text-center px-6">
+            <span class="word opacity-0 -translate-x-20 transition-all duration-700">Step</span>
+            <span class="word opacity-0 translate-y-20 transition-all duration-700 delay-100">into</span>
+            <span class="word opacity-0 translate-x-20 transition-all duration-700 delay-200">the</span>
+            <span class="word opacity-0 -translate-y-20 transition-all duration-700 delay-300">world</span>
+            <span class="word opacity-0 translate-x-20 transition-all duration-700 delay-400">of</span>
+            <span class="word opacity-0 -translate-x-20 transition-all duration-700 delay-500">ancient</span>
+            <span class="word opacity-0 translate-y-20 transition-all duration-700 delay-600">gods</span>
+            <span class="word opacity-0 -translate-x-20 transition-all duration-700 delay-700">and</span>
+            <span class="word opacity-0 translate-x-20 transition-all duration-700 delay-800">timeless</span>
+            <span class="word opacity-0 -translate-y-20 transition-all duration-700 delay-900">legends.</span>
+        </div>
+    </section>
+
+    <main id="about" class="h-auto w-full ">
+        <div class="bg-white h-[500px] w-full flex flex-col items-center ">
+            <div class="w-[300px] text-center p-5 font-serif italic text-base">
+                <hr>
+                <p class="text-2xl">The Olympian Gods</p>
+                <hr>
+            </div>
+            <div class="relative w-full overflow-hidden h-[400px]">
+                <!-- Wrapper for slides -->
+                <div id="slider" class="flex w-[300vw] h-[400px]  transition-transform duration-500">
+
+                    <!-- Slide 1 -->
+                    <section class="w-screen flex items-center justify-center rounded-xl mx-8  mb-5  bg-gray-200/20
+                         backdrop-blur-md">
+                        <div class="relative  px-10 w-[300px] h-[400px] overflow-hidden  md:w-full">
+                            <div
+                                class="absolute z-[7] -bottom-2 bg-[url('./image/Zeus.png')] w-[200px] h-[300px] bg-cover bg-no-repeat bg-center xl:left-1/10 xl:w-[300px] xl:h-[400px] xl:-bottom-15">
+                            </div>
+                            <p
+                                class="absolute text-8xl z-[6] top-1/7 left-1/7 font-serif md:left-0 md:ml-8 xl:left-1/9 xl:top-1/40 ">
+                                Zeus</p>
+                            <div class="content hidden md:flex  h-full w-auto ml-50">
+                                <div class="p-6  max-w-2xl mx-auto text-black space-y-4">
+                                    <h2 class="text-xl md:text-2xl font-semibold text-gray-300">Domain</h2>
+                                    <p class="text-base md:text-lg font-light">King of the Gods, God of the Sky &
+                                        Thunder</p>
+
+                                    <h2 class="text-xl md:text-2xl font-semibold text-gray-300">Symbol</h2>
+                                    <p class="text-base md:text-lg font-light">Thunderbolt, Eagle</p>
+
+                                    <h2 class="text-xl md:text-2xl font-semibold text-gray-300">Story</h2>
+                                    <p class="text-base md:text-lg font-light">
+                                        Defeated the Titans and ruled Mount Olympus. Known for his many affairs and
+                                        offspring.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Slide 2 -->
+                    <section class="w-screen flex items-center justify-center rounded-xl mx-8  mb-5  bg-gray-200/20
+                         backdrop-blur-md">
+                        <div class="relative  px-10 w-[300px] h-[400px] overflow-hidden  md:w-full">
+                            <div
+                                class="absolute z-[7] -bottom-2 bg-[url('./image/Hera.png')] w-[200px] h-[300px] bg-cover bg-no-repeat bg-center xl:left-1/10 xl:w-[300px] xl:h-[400px] xl:-bottom-20">
+                            </div>
+                            <p
+                                class="absolute text-8xl z-[6] top-1/7 left-1/7 font-serif md:left-0 md:ml-8 xl:left-1/9 xl:top-1/40 ">
+                                Hera</p>
+                            <div class="content hidden md:flex  h-full w-auto ml-50">
+                                <div class="p-6  max-w-2xl mx-auto text-black space-y-4">
+                                    <h2 class="text-xl md:text-2xl font-semibold text-gray-300">Domain</h2>
+                                    <p class="text-base md:text-lg font-light">Goddess of Marriage and Family</p>
+
+                                    <h2 class="text-xl md:text-2xl font-semibold text-gray-300">Symbol</h2>
+                                    <p class="text-base md:text-lg font-light">Peacock, Diadem</p>
+
+                                    <h2 class="text-xl md:text-2xl font-semibold text-gray-300">Story</h2>
+                                    <p class="text-base md:text-lg font-light">
+                                        Wife of Zeus, often portrayed as jealous and vengeful, but deeply protective of
+                                        marriage.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Slide 3 -->
+                    <section class="w-screen flex items-center justify-center rounded-xl mx-8  mb-5  bg-gray-200/20
+                         backdrop-blur-md">
+                        <div class="relative  px-10 w-[300px] h-[400px] overflow-hidden  md:w-full">
+                            <div
+                                class="absolute z-[7] -bottom-2 bg-[url('./image/Poseidon.png')] w-[200px] h-[280px] bg-cover bg-no-repeat bg-center xl:left-1/10 xl:w-[300px] xl:h-[400px] xl:-bottom-20">
+                            </div>
+                            <p
+                                class="absolute text-6xl z-[6] top-1/5 left-1/8 font-serif md:left-0 md:ml-8 xl:left-1/9 xl:top-1/40 ">
+                                Poseidon</p>
+                            <div class="content hidden md:flex  h-full w-auto ml-50">
+                                <div class="p-6  max-w-2xl mx-auto text-black space-y-4">
+                                    <h2 class="text-xl md:text-2xl font-semibold text-gray-300">Domain</h2>
+                                    <p class="text-base md:text-lg font-light">God of the Sea</p>
+
+                                    <h2 class="text-xl md:text-2xl font-semibold text-gray-300">Symbol</h2>
+                                    <p class="text-base md:text-lg font-light">Trident, Horse</p>
+
+                                    <h2 class="text-xl md:text-2xl font-semibold text-gray-300">Story</h2>
+                                    <p class="text-base md:text-lg font-light">
+                                        Creator of horses and earthquakes. Known for his moody and tempestuous nature.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="absolute top-1/2 left-2 transform -translate-y-1/2 z-10">
+
+                    <svg id="prevBtn" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                    </svg>
+                </div>
+                <div class="absolute top-1/2 right-2 transform -translate-y-1/2 z-10">
+                    <svg id="nextBtn" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="h-auto w-full  flex flex-col items-center">
+            <div class="w-[300px] text-center p-5 font-serif italic text-base">
+                <hr>
+                <p class="text-2xl"> Famous Myths & Legends</p>
+                <hr>
+            </div>
+            <div class="m-5 relative ">
+                <div id="horse-container">
+                    <div id="horse-left"
+                        class="hidden xl:flex  transition-transform duration-[1000ms] ease-in-out absolute left-1/5 bg-[url('./image/horse.png')] h-[400px] w-[400px] z-[1] bg-center bg-cover bg-no-repeat">
+                    </div>
+                    <div id="horse-right"
+                        class="hidden xl:flex  transition-transform duration-[1000ms] ease-in-out absolute left-1/5 bg-[url('./image/horseR.png')] h-[400px] w-[400px] z-[1] bg-center bg-cover bg-no-repeat">
+                    </div>
+                </div>
+                <div class="relative rounded-t-xl w-full h-[300px] bg-white md:h-[400px] md:w-auto overflow-hidden">
+                    <div
+                        class="absolute rounded-t-xl md:left-0  bg-[url('./image/trojanbg.jpg')] bg-cover z-[2] bg-center bg-no-repeat h-full w-full md:h-[400px] md:w-full">
+                    </div>
+                    <div
+                        class="trojan-war xl:hidden absolute bg-[url('./image/horse.png')] bg-cover bg-center w-[200px] h-[200px] z-[3] -bottom-10 -right-12 ">
+                    </div>
+                </div>
+                <div
+                    class="bg-white/30 backdrop-blur-md border border-white/30 rounded-b-xl p-6 max-w-2xl mx-auto text-black shadow-md">
+                    <h2 class="text-2xl font-bold text-yellow-300 mb-3">1. The Trojan War</h2>
+                    <p class="text-lg font-light leading-relaxed">
+                        The legendary war fought over <span class="text-pink-300 font-medium">Helen of Troy</span>. Key
+                        figures include:
+                        <span class="text-cyan-300 font-medium">Achilles</span>,
+                        <span class="text-green-300 font-medium">Hector</span>,
+                        <span class="text-purple-300 font-medium">Paris</span>, and
+                        <span class="text-orange-300 font-medium">Odysseus</span>.
+                    </p>
+                </div>
+            </div>
+            <div class="m-5 relative ">
+                <div id="medusa-container"
+                    class="rounded-t-xl w-full h-[300px] bg-black md:h-[400px] md:w-auto overflow-hidden flex justify-center items-center">
+                    <div id="medusa" class="bg-[url('./image/MedusaAndPerseus.png')] bg-cover bg-center w-[300px] h-[350px] z-[3]
+           mb-[-40px] opacity-0 translate-y-10 transition-all duration-700 ease-in-out">
+                    </div>
+                </div>
+
+
+                <div
+                    class="bg-white/30 backdrop-blur-md border border-white/30 rounded-b-xl p-6 max-w-2xl mx-auto text-black shadow-md">
+                    <h2 class="text-2xl font-bold text-pink-300 mb-3">2. Medusa & Perseus</h2>
+                    <p class="text-lg font-light leading-relaxed">
+                        Perseus, son of Zeus, defeats the snake-haired Gorgon and uses her head as a weapon.
+                    </p>
+                </div>
+            </div>
+            <div class="m-5 relative ">
+                <div id="orpheus-container"
+                    class="relative rounded-t-xl w-full h-[300px] bg-white md:h-[400px] md:w-auto overflow-hidden">
+                    <!-- background -->
+                    <div
+                        class="absolute rounded-t-xl md:left-0 bg-[url('./image/OrpheusandEurydicebg.png')] bg-cover z-[2] bg-center bg-no-repeat h-full w-full md:h-[400px] md:w-full">
+                    </div>
+
+                    <!-- foreground image -->
+                    <div id="orpheus-image"
+                        class="absolute bg-[url('./image/OrpheusandEurydice.png')] bg-cover bg-center w-[220px] h-[140px] md:w-[300px] md:h-[200px] z-[3] -bottom-10 left-0 transition-transform duration-300 ease-out">
+                    </div>
+                </div>
+
+
+
+                <div
+                    class="bg-white/30 backdrop-blur-md border border-white/30 rounded-b-xl p-6 max-w-2xl mx-auto text-black shadow-md">
+                    <h2 class="text-2xl font-bold text-blue-300 mb-3">3. Orpheus and Eurydice</h2>
+                    <p class="text-lg font-light leading-relaxed">
+                        A tragic love story. Orpheus travels to the Underworld to bring back his beloved, only to lose
+                        her again.
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+    <section id="quiz" class="py-10 px-4 bg-white text-black">
+        <div class="max-w-xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center">Which Greek God Are You?</h2>
+
+            <form id="god-quiz" class="space-y-6 max-w-xl mx-auto p-8">
+                <!-- Step 1 -->
+                <div class="quiz-step" data-step="1">
+                    <p class="font-semibold mb-2">1. What would you do in a conflict?</p>
+                    <label><input type="radio" name="q1" value="zeus" required> Lead and resolve it calmly.</label><br>
+                    <label><input type="radio" name="q1" value="poseidon"> Let your emotions guide you.</label><br>
+                    <label><input type="radio" name="q1" value="ares"> Jump into action!</label><br>
+                    <label><input type="radio" name="q1" value="athena"> Think and strategize first.</label><br>
+                    <button type="button" class="next-btn mt-4 px-6 py-2 rounded-xl text-black 
+         bg-white/10 backdrop-blur-md border border-white/20 
+         shadow-lg transition hover:bg-blue-500/20 hover:shadow-xl">Next</button>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="quiz-step hidden" data-step="2">
+                    <p class="font-semibold mb-2">2. What's your ideal environment?</p>
+                    <label><input type="radio" name="q2" value="poseidon" required> Ocean or beach</label><br>
+                    <label><input type="radio" name="q2" value="athena"> Library or classroom</label><br>
+                    <label><input type="radio" name="q2" value="ares"> Battlefield or gym</label><br>
+                    <label><input type="radio" name="q2" value="zeus"> Mountains or sky</label><br>
+                    <button type="button" class="next-btn mt-4 px-6 py-2 rounded-xl text-black 
+         bg-white/10 backdrop-blur-md border border-white/20 
+         shadow-lg transition hover:bg-blue-500/20 hover:shadow-xl">Next</button>
+                </div>
+
+                <!-- Step 3 (last) -->
+                <div class="quiz-step hidden" data-step="3">
+                    <p class="font-semibold mb-2">3. What motivates you the most?</p>
+                    <label><input type="radio" name="q3" value="zeus" required> Power and leadership</label><br>
+                    <label><input type="radio" name="q3" value="athena"> Knowledge and wisdom</label><br>
+                    <label><input type="radio" name="q3" value="ares"> Glory and strength</label><br>
+                    <label><input type="radio" name="q3" value="poseidon"> Emotion and loyalty</label><br>
+                    <button type="submit" class="next-btn mt-4 px-6 py-2 rounded-xl text-black 
+         bg-green-500/10 backdrop-blur-md border border-white/20 
+         shadow-lg transition hover:bg-green-600/20 hover:shadow-xl">Submit</button>
+                </div>
+            </form>
+
+            <!-- Show result here -->
+            <div class="flex items-center flex-col">
+                <div id="result" class="text-center text-xl font-semibold mt-6 hidden"></div>
+                <button id="try-again" class="mt-4 bg-red-600/10 text-red-700 px-6 py-2 rounded-xl
+                             border border-red-600/30 backdrop-blur-md shadow-md hidden
+                             hover:bg-red-600/20 transition"> Try Again
+                </button>
+            </div>
+    </section>
+
+    <footer class="bg-black text-white py-6 text-center text-sm mt-10">
+        <p>© 2025 MythosGreece. Built by <span class="font-semibold">Pasagone Suwan</span>.</p>
+        <p class="mt-2">Made with ❤️ & Tailwind CSS</p>
+    </footer>
+
+
+
+
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

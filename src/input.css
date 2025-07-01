@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .text-black-500 {
+    color: lightblue;
+    font-size: 2.6rem;
+  }
+  .sea-box {
+    position: relative;
+    height: 600px;
+    background-image: url(./image/backgroundcolor.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+
+  .text-logos {
+    font-size: 100px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .mountain {
+    position: absolute;
+    bottom: 0;
+    /* <<< เลื่อนลงไปล่างจากขอบ */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./image/mountain2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+  }
+
+  .sea {
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-image: url(./image/sea.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    /* มากกว่า mountain */
+  }
+
+  .trojan-war {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  }
+  .trojan-war.is-showing {
+    opacity: 1;
+  }
+}
