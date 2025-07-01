@@ -4,7 +4,7 @@
 Interactive web page with scroll-based animation inspired by Greek mythology.  
 Built with HTML, Tailwind CSS, and jQuery.
 
-👉 [View Live on Netlify](https://your-netlify-site.netlify.app)
+👉 [View Live on Netlify](https://mythosgreece.netlify.app/)
 
 ## 🚀 Features
 
