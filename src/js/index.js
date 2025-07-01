@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const resultDiv = document.getElementById("result");
   const form = document.getElementById("god-quiz");
   
-  let currentStep = 0;
+
 
   nextButtons.forEach((btn, index) => {
     btn.addEventListener("click", () => {
